@@ -1,0 +1,171 @@
+{
+  "app": {
+    "name": "airri"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "history": "History",
+    "statistik": "Statistics",
+    "trigger": "Trigger",
+    "restriction": "Restriction"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "retry": "Retry",
+    "delete": "Delete",
+    "reset": "Reset"
+  },
+  "connection": {
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "offline": "Offline"
+  },
+  "menu": {
+    "about_device": "ⓘ  About Device",
+    "delete_logs": "🗑️  Delete Logs",
+    "device_address": "📡  Device Address",
+    "request_logging": "🪵  Request Logging: {status}",
+    "logging_on": "ON",
+    "logging_off": "OFF",
+    "factory_reset": "↻  Factory Reset"
+  },
+  "about": {
+    "connected_to": "Connected to {url}"
+  },
+  "dialog": {
+    "delete_logs_title": "Delete Logs",
+    "delete_logs_message": "All log data (sensor and irrigation) will be deleted. Trigger and restriction settings will not change.",
+    "factory_reset_title": "Factory Reset",
+    "factory_reset_message": "All log data will be deleted and settings will be restored to default values. Continue?"
+  },
+  "snackbar": {
+    "test_pump_done": "Test pump complete",
+    "logging_enabled": "Request logging enabled",
+    "logging_disabled": "Request logging disabled",
+    "logs_deleted": "Logs deleted successfully",
+    "factory_reset_done": "Factory reset successful"
+  },
+  "dashboard": {
+    "last_sync": "Last Sync",
+    "syncing_title": "Synchronizing...",
+    "syncing_subtitle": "Downloading sensor logs...",
+    "offline_title": "Unable to connect",
+    "offline_subtitle": "Check connection to device",
+    "time_not_synced_title": "Device time not synchronized",
+    "time_not_synced_subtitle": "RTC & NTP failed — timestamps on recent logs may be inaccurate",
+    "today_summary": "Today's Summary",
+    "stat_irrigation": "Irrigation",
+    "stat_water": "Water",
+    "stat_soil": "Soil",
+    "sensor_status": "Sensor Status (Latest)",
+    "pump_status": "Pump Status",
+    "pump_running": "Running",
+    "pump_ready": "Ready",
+    "pump_running_subtitle": "Pump is running",
+    "condition_eval": "Condition Evaluation",
+    "trigger_label": "Trigger",
+    "restriction_label": "Restriction",
+    "decision_label": "Decision",
+    "trigger_met": "✓ Trigger Met",
+    "trigger_not_met": "✗ Trigger Not Met",
+    "no_restriction": "✓ No Restriction",
+    "restricted": "⚠ Restricted",
+    "pump_will_run": "✓ Pump Will/Is Running",
+    "pump_not_running": "✗ Pump Not Running",
+    "synchronize": "↻ Synchronize",
+    "test_pump": "▷ Test Pump"
+  },
+  "sensor": {
+    "soil_moisture": "Soil Moisture",
+    "air_humidity": "Air Humidity",
+    "temperature": "Temperature",
+    "light_intensity": "Light Intensity"
+  },
+  "condition": {
+    "soil_moisture_label": "Soil Moisture",
+    "humidity_label": "Air Humidity",
+    "temperature_label": "Temperature",
+    "light_label": "Light",
+    "no_restriction_active": "No restriction active"
+  },
+  "history": {
+    "all_dates": "All dates",
+    "clear_date_tooltip": "Back to latest timeline",
+    "load_failed_title": "Failed to load history",
+    "syncing_title": "Synchronizing...",
+    "syncing_subtitle": "Syncing latest data...",
+    "sync_failed_title": "Sync failed",
+    "sync_failed_subtitle": "Showing last saved data. {error}",
+    "empty": "No history yet",
+    "irrigation_started": "💧 Irrigation Started",
+    "duration_only": "Duration {duration}s",
+    "duration_volume": "Duration {duration}s · {volume} ml",
+    "sensor_reading": "Sensor Reading",
+    "sensor_reading_irrigating": "🌱 Sensor Reading (irrigating)",
+    "sensor_reading_subtitle": "Soil {soil}% · Humidity {humidity}% · Temp {temp}°C · Light {light} lx",
+    "incomplete_data": "⚠️ Incomplete Data",
+    "incomplete_data_subtitle": "{count} {logType} logs missing (id {from}–{to}) before they could be synced from the device",
+    "log_type_sensor": "sensor",
+    "log_type_irrigation": "irrigation"
+  },
+  "trigger_page": {
+    "load_failed_title": "Failed to load trigger setting",
+    "intro": "Run irrigation if",
+    "soil_moisture": "Soil Moisture",
+    "pump_flow_rate": "Pump Flow Rate",
+    "flow_rate_unit": "ml/min",
+    "info": "If soil moisture meets the rule above and no restriction is active, the pump turns on at this flow rate.",
+    "info_fixed": "Pump Flow Rate is a fixed value determined by the pump's physical specification, not a setting that can be changed from the app.",
+    "saved": "Trigger setting saved",
+    "save_failed": "Failed to save"
+  },
+  "restriction_page": {
+    "load_failed_title": "Failed to load restriction setting",
+    "intro": "Do not run irrigation if",
+    "temperature": "Temperature",
+    "humidity": "Air Humidity",
+    "light_intensity": "Light Intensity",
+    "info": "If any of the conditions above is met (and active), the pump won't turn on even if the trigger is satisfied.",
+    "pump_safety_net": "Pump Safety Net",
+    "max_pump_runtime": "Max Pump Runtime",
+    "seconds_unit": "sec",
+    "info_safety": "Maximum limit for the pump running continuously without stopping. Always applies, regardless of the restriction conditions above.",
+    "saved": "Restriction setting saved",
+    "save_failed": "Failed to save"
+  },
+  "statistik": {
+    "period_7d": "7 Days",
+    "period_30d": "30 Days",
+    "period_1y": "1 Year",
+    "period_3y": "3 Years",
+    "period_all": "All",
+    "summary_7d": "Last 7 Days Summary",
+    "summary_30d": "Last 30 Days Summary",
+    "summary_1y": "Last Year Summary",
+    "summary_3y": "Last 3 Years Summary",
+    "summary_all": "All-Time Summary",
+    "stat_soil_avg": "Soil Avg",
+    "stat_water": "Water",
+    "stat_cycles": "Cycles",
+    "chart_soil_trend": "Soil Moisture Trend / {unit}",
+    "chart_water_usage": "Water Usage / {unit}",
+    "unit_day": "Day",
+    "unit_week": "Week",
+    "unit_month": "Month",
+    "no_data": "No data yet"
+  },
+  "device_address": {
+    "title": "Device Address",
+    "body": "Enter the ESP32's IP address (see the Serial Monitor or TFT screen at boot)."
+  },
+  "errors": {
+    "device_timeout": "Connection to device timed out. Check your WiFi network.",
+    "device_unreachable": "Unable to connect to device. Check the IP address & WiFi connection.",
+    "device_status_error": "Device responded with an error ({status}).",
+    "device_generic_error": "Failed to connect to device.",
+    "unknown_error": "An error occurred: {error}",
+    "status_load_failed": "Failed to load device status.",
+    "sync_metadata_failed": "Failed to fetch sync metadata."
+  }
+}

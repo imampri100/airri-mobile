@@ -1,0 +1,171 @@
+{
+  "app": {
+    "name": "airri"
+  },
+  "nav": {
+    "dashboard": "Beranda",
+    "history": "Riwayat",
+    "statistik": "Statistik",
+    "trigger": "Pemicu",
+    "restriction": "Batasan"
+  },
+  "common": {
+    "cancel": "Batal",
+    "save": "Simpan",
+    "retry": "Coba Lagi",
+    "delete": "Hapus",
+    "reset": "Reset"
+  },
+  "connection": {
+    "connecting": "Menghubungkan...",
+    "connected": "Terhubung",
+    "offline": "Terputus"
+  },
+  "menu": {
+    "about_device": "ⓘ  Tentang Perangkat",
+    "delete_logs": "🗑️  Hapus Log",
+    "device_address": "📡  Alamat Perangkat",
+    "request_logging": "🪵  Log Permintaan: {status}",
+    "logging_on": "AKTIF",
+    "logging_off": "NONAKTIF",
+    "factory_reset": "↻  Reset Pabrik"
+  },
+  "about": {
+    "connected_to": "Terhubung ke {url}"
+  },
+  "dialog": {
+    "delete_logs_title": "Hapus Log",
+    "delete_logs_message": "Semua data log (sensor dan irigasi) akan dihapus. Pengaturan pemicu dan batasan tidak akan berubah.",
+    "factory_reset_title": "Reset Pabrik",
+    "factory_reset_message": "Semua data log akan dihapus dan pengaturan akan dikembalikan ke nilai bawaan. Lanjutkan?"
+  },
+  "snackbar": {
+    "test_pump_done": "Test pump selesai",
+    "logging_enabled": "Request logging diaktifkan",
+    "logging_disabled": "Request logging dinonaktifkan",
+    "logs_deleted": "Logs berhasil dihapus",
+    "factory_reset_done": "Factory reset berhasil"
+  },
+  "dashboard": {
+    "last_sync": "Sinkronisasi Terakhir",
+    "syncing_title": "Menyinkronkan...",
+    "syncing_subtitle": "Mengunduh log sensor...",
+    "offline_title": "Tidak dapat terhubung",
+    "offline_subtitle": "Periksa koneksi ke perangkat",
+    "time_not_synced_title": "Waktu perangkat belum tersinkron",
+    "time_not_synced_subtitle": "RTC & NTP gagal — waktu pada log sensor/irigasi terbaru mungkin tidak akurat",
+    "today_summary": "Ringkasan Hari Ini",
+    "stat_irrigation": "Irigasi",
+    "stat_water": "Air",
+    "stat_soil": "Tanah",
+    "sensor_status": "Sensor Status (Terakhir)",
+    "pump_status": "Status Pompa",
+    "pump_running": "Berjalan",
+    "pump_ready": "Siap",
+    "pump_running_subtitle": "Pompa sedang menyala",
+    "condition_eval": "Evaluasi Kondisi",
+    "trigger_label": "Pemicu",
+    "restriction_label": "Batasan",
+    "decision_label": "Keputusan",
+    "trigger_met": "✓ Pemicu Terpenuhi",
+    "trigger_not_met": "✗ Pemicu Tidak Terpenuhi",
+    "no_restriction": "✓ Tidak Ada Batasan",
+    "restricted": "⚠ Batasan Aktif",
+    "pump_will_run": "✓ Pompa Akan/Sedang Menyala",
+    "pump_not_running": "✗ Pompa Tidak Menyala",
+    "synchronize": "↻ Sinkronkan",
+    "test_pump": "▷ Uji Pompa"
+  },
+  "sensor": {
+    "soil_moisture": "Kelembapan Tanah",
+    "air_humidity": "Kelembapan Udara",
+    "temperature": "Suhu",
+    "light_intensity": "Intensitas Cahaya"
+  },
+  "condition": {
+    "soil_moisture_label": "Kelembapan Tanah",
+    "humidity_label": "Kelembapan Udara",
+    "temperature_label": "Suhu",
+    "light_label": "Cahaya",
+    "no_restriction_active": "Tidak ada batasan aktif"
+  },
+  "history": {
+    "all_dates": "Semua tanggal",
+    "clear_date_tooltip": "Kembali ke linimasa terbaru",
+    "load_failed_title": "Gagal memuat riwayat",
+    "syncing_title": "Menyinkronkan...",
+    "syncing_subtitle": "Menyinkronkan data terbaru...",
+    "sync_failed_title": "Gagal sinkronisasi",
+    "sync_failed_subtitle": "Menampilkan data tersimpan terakhir. {error}",
+    "empty": "Belum ada riwayat",
+    "irrigation_started": "💧 Irigasi Dimulai",
+    "duration_only": "Durasi {duration} dtk",
+    "duration_volume": "Durasi {duration} dtk · {volume} ml",
+    "sensor_reading": "Pembacaan Sensor",
+    "sensor_reading_irrigating": "🌱 Pembacaan Sensor (irigasi aktif)",
+    "sensor_reading_subtitle": "Tanah {soil}% · Kelembapan {humidity}% · Suhu {temp}°C · Cahaya {light} lx",
+    "incomplete_data": "⚠️ Data Tidak Lengkap",
+    "incomplete_data_subtitle": "{count} log {logType} hilang (id {from}–{to}) sebelum sempat disinkron dari device",
+    "log_type_sensor": "sensor",
+    "log_type_irrigation": "irigasi"
+  },
+  "trigger_page": {
+    "load_failed_title": "Gagal memuat pengaturan pemicu",
+    "intro": "Jalankan irigasi jika",
+    "soil_moisture": "Kelembapan Tanah",
+    "pump_flow_rate": "Debit Pompa",
+    "flow_rate_unit": "ml/min",
+    "info": "Ketika kondisi kelembapan tanah memenuhi aturan di atas dan tidak ada batasan yang aktif, pompa akan menyala dengan debit tersebut.",
+    "info_fixed": "Debit Pompa adalah nilai tetap sesuai spesifikasi fisik pompa, bukan pengaturan yang bisa diubah dari aplikasi.",
+    "saved": "Pengaturan Pemicu tersimpan",
+    "save_failed": "Gagal menyimpan"
+  },
+  "restriction_page": {
+    "load_failed_title": "Gagal memuat pengaturan batasan",
+    "intro": "Jangan jalankan irigasi jika",
+    "temperature": "Suhu",
+    "humidity": "Kelembapan Udara",
+    "light_intensity": "Intensitas Cahaya",
+    "info": "Jika salah satu kondisi di atas terpenuhi (dan aktif), pompa tidak akan menyala meskipun pemicu terpenuhi.",
+    "pump_safety_net": "Pengaman Pompa",
+    "max_pump_runtime": "Durasi Maksimal Pompa",
+    "seconds_unit": "detik",
+    "info_safety": "Batas maksimal pompa menyala terus-menerus tanpa henti. Berlaku selalu, terlepas dari kondisi batasan di atas.",
+    "saved": "Pengaturan Batasan tersimpan",
+    "save_failed": "Gagal menyimpan"
+  },
+  "statistik": {
+    "period_7d": "7 Hari",
+    "period_30d": "30 Hari",
+    "period_1y": "1 Tahun",
+    "period_3y": "3 Tahun",
+    "period_all": "Semua",
+    "summary_7d": "Ringkasan 7 Hari Terakhir",
+    "summary_30d": "Ringkasan 30 Hari Terakhir",
+    "summary_1y": "Ringkasan 1 Tahun Terakhir",
+    "summary_3y": "Ringkasan 3 Tahun Terakhir",
+    "summary_all": "Ringkasan Semua Waktu",
+    "stat_soil_avg": "Tanah",
+    "stat_water": "Air",
+    "stat_cycles": "Siklus",
+    "chart_soil_trend": "Tren Kelembapan Tanah / {unit}",
+    "chart_water_usage": "Pemakaian Air / {unit}",
+    "unit_day": "Hari",
+    "unit_week": "Minggu",
+    "unit_month": "Bulan",
+    "no_data": "Belum ada data"
+  },
+  "device_address": {
+    "title": "Alamat Perangkat",
+    "body": "Masukkan alamat IP ESP32 (lihat Serial Monitor atau layar TFT saat boot)."
+  },
+  "errors": {
+    "device_timeout": "Koneksi ke perangkat timeout. Periksa jaringan WiFi kamu.",
+    "device_unreachable": "Tidak dapat terhubung ke perangkat. Periksa alamat IP & koneksi WiFi.",
+    "device_status_error": "Perangkat merespon dengan error ({status}).",
+    "device_generic_error": "Gagal terhubung ke perangkat.",
+    "unknown_error": "Terjadi kesalahan: {error}",
+    "status_load_failed": "Gagal memuat status perangkat.",
+    "sync_metadata_failed": "Gagal mengambil metadata sinkronisasi."
+  }
+}
