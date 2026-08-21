@@ -1,0 +1,24 @@
+dev_dependencies:
+  flutter_launcher_icons: "^0.14.4"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png" # FULL logo (droplet + sync + storage) with gradient background
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png" # white knockout mark, transparent bg # only available for Android 8.0 devices and above
+  adaptive_icon_foreground_inset: 0 # sudah dikasih safe-zone margin di gambar sendiri (58% fill)
+  adaptive_icon_background: "assets/icon/icon_background.png" # background only # only available for Android 8.0 devices and above
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+  web:
+    generate: true
+    image_path: "assets/icon/icon_mark_transparent.png"
+    background_color: "#ffffff"
+    theme_color: "#22A05F"
+  windows:
+    generate: true
+    image_path: "assets/icon/icon_mark_transparent.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icon/icon_mark_transparent.png"
