@@ -386,9 +386,9 @@ pio run
 
 **Sebelum upload:**
 
-1. **Pastikan jam laptop sudah WIB dan akurat.** Kalau RTC baru atau
-   baterainya pernah habis, firmware menyetel jam RTC dari waktu
-   kompilasi (jam laptop). Jam laptop salah → timestamp log salah.
+1. **Pastikan jam laptop sudah WIB dan akurat.** Jam RTC disetel dari
+   jam laptop saat kompilasi, tapi hanya dengan urutan tertentu — lihat
+   **Setel jam RTC** di akhir bagian 2.7.
 2. **Tutup Serial Monitor** yang sedang terbuka — port hanya bisa dipakai
    satu program.
 3. Colok ESP32 via USB. Cek port terdeteksi:
@@ -482,11 +482,37 @@ Atau buka `http://192.168.4.1/api/status` di browser.
 | Monitor menampilkan karakter acak | Baud rate salah — harus 115200 |
 | `SD Card gagal diinisialisasi` | Kartu belum FAT32 / tidak terpasang rapat / wiring SPI (CS=5, SCK=18, MOSI=23, MISO=19) salah / modul SD butuh 5V (cek spesifikasi modul) |
 | `RTC DS3231 tidak terdeteksi di bus I2C` / `RTC DS3231 tidak siap - mencoba fallback NTP` | Cek wiring I2C (21/22), VCC 3.3V & GND. Jika tidak bisa, sambungkan STA ke WiFi ber-internet supaya fallback NTP bekerja |
-| `RTC DS3231 kehilangan daya` / tahun di log aneh | Baterai CR2032 habis/tidak terpasang. Pasang baterai, lalu upload ulang firmware supaya RTC disetel dari jam laptop |
+| Jam di TFT atau di Riwayat app salah | Jam RTC salah. Ikuti **Setel jam RTC** di bawah — upload ulang saja tidak cukup |
 | `AHT10 tidak terdeteksi di bus I2C` / `BH1750 tidak terdeteksi di bus I2C`, nilai sensor 0 | Cek wiring I2C (SDA 21, SCL 22), VCC & GND modul |
 | TFT blank / putih | Cek wiring CS=33, DC=16, RES=17, dan VCC/GND/BL. Firmware tetap jalan walau TFT mati — cek via Serial/API |
 | Teks di TFT terpotong pinggir | Posisi baris dihitung secara geometri, bukan diukur di hardware — sesuaikan `y`/`lineHeight` di `display_manager.cpp` |
 | SSID tidak muncul | Cek `apEnabled` di `wifi.json`. Kalau `staEnabled: true` tapi WiFi tujuan tidak ada, set `false` |
+
+**Setel jam RTC** (modul RTC baru, baterai CR2032 pernah dilepas/habis,
+atau jam di TFT salah):
+
+Jam tidak bisa disetel lewat app. RTC hanya disetel saat chip
+kehilangan daya, memakai jam laptop saat file RTC terakhir dikompilasi.
+Urutannya penting:
+
+1. Pastikan jam laptop akurat dan di zona **WIB**.
+2. Di folder `airri-esp32`, paksa file RTC dikompilasi ulang, lalu upload:
+   ```bash
+   touch src/infrastructure/time/rtc_time_provider.cpp
+   pio run --target upload
+   ```
+3. Segera setelah upload selesai: **cabut USB** ESP32 → **lepas baterai
+   CR2032** ±10–30 detik → pasang lagi → colok USB.
+4. Serial Monitor harus menampilkan `RTC DS3231 kehilangan daya ...`, dan
+   jam di TFT sama dengan jam laptop (selisih ±1 menit).
+
+Yang perlu diperhatikan:
+
+- Upload ulang saja **tidak** mengubah jam RTC yang baterainya masih ada.
+- Kalau baterai dilepas saat ESP32 masih menyala, RTC tetap mendapat daya
+  dari ESP32, jadi jamnya tidak berubah.
+- Log yang tercatat sebelum jam disetel tetap memakai jam lama. Hapus
+  lewat 🗑️ Hapus Log kalau perlu.
 
 ### 2.8 Kalibrasi Soil Moisture
 
